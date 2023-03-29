@@ -24,12 +24,12 @@
         <version>10.5.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>kafka-connect-s3</artifactId>
+    <artifactId>kafka-connect-ldes-s3</artifactId>
     <packaging>jar</packaging>
     <name>kafka-connect-s3</name>
 
     <description>
-        Kafka Connect cloud storage connector for Amazon Simple Storage Service (S3).
+        Kafka Connect cloud storage connector for storing LDES members on Amazon Simple Storage Service (S3).
     </description>
 
     <properties>
@@ -185,7 +185,7 @@
                             <goal>kafka-connect</goal>
                         </goals>
                         <configuration>
-                            <title>Kafka Connect S3</title>
+                            <title>Kafka Connect LDES S3</title>
                             <sourceUrl>https://github.com/confluentinc/kafka-connect-storage-cloud</sourceUrl>
                             <documentationUrl>https://docs.confluent.io/kafka-connect-s3-sink/current/index.html</documentationUrl>
                             <description>

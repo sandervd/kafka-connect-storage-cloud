@@ -100,10 +100,13 @@ public class JsonRecordWriterProvider extends RecordViewSetter
 
             @Override
             public void commit() throws IOException {
+              writer.writeObject("-->>>record");
+              writer.writeRaw(LINE_SEPARATOR);
               // Flush is required here, because closing the writer will close the underlying S3
               // output stream before committing any data to S3.
               writer.flush();
               s3out.commit();
+
               s3outWrapper.close();
             }
 
