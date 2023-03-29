@@ -1,5 +1,6 @@
 # Build products
 target/
+data/
 build/
 
 # IntelliJ data
