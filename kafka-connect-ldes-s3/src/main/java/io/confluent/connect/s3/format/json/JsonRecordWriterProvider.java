@@ -106,7 +106,6 @@ public class JsonRecordWriterProvider extends RecordViewSetter
               // output stream before committing any data to S3.
               writer.flush();
               s3out.commit();
-
               s3outWrapper.close();
             }
 

@@ -643,8 +643,6 @@ public class TopicPartitionWriter {
     if (writers.containsKey(encodedPartition)) {
       RecordWriter writer = writers.get(encodedPartition);
       // Commits the file and closes the underlying output stream.
-      SinkRecord record = new SinkRecord();
-      writer.write();
       writer.commit();
       writers.remove(encodedPartition);
       log.debug("Removed writer for '{}'", encodedPartition);
